@@ -1,0 +1,44 @@
+
+# Aliases
+#   System
+alias poweroff="sudo sync && sudo sync && sudo poweroff"
+alias reboot="sudo sync && sudo sync && sudo reboot"
+alias systemctl="sudo systemctl"
+
+#   Command
+alias pwd="pwd -P"
+alias rmdir="rmdir -p"
+alias ls="ls --color=always"
+alias cp="cp -ai"
+alias rm="rm -ri"
+alias mv="mv -i"
+alias egrep="egrep --color=auto --exclude-dir={.bzr,.cvs,.git,.hg,.svn}"
+
+#   Pacman
+alias pacman="sudo pacman"
+alias pacupg="sudo pacman -Syu"
+alias pacdl="sudo pacman -Sw"
+alias pacin="sudo pacman -S"
+alias pacins="sudo pacman -U"
+alias pacre="sudo pacman -R"
+alias pacrem="sudo pacman -Rns"
+alias pacrep="sudo pacman -Si"
+alias pacreps="sudo pacman -Ss"
+alias pacloc="sudo pacman -Qi"
+alias paclocs="sudo pacman -Qs"
+alias paclo="sudo pacman -Qdt"
+alias pacc="sudo pacman -Scc"
+alias paclf="sudo pacman -Ql"
+alias pacown="sudo pacman -Qo"
+alias pacexpl="sudo pacman -D --asexp"
+alias pacimpl="sudo pacman -D --asdep"
+alias pacupd="sudo pacman -Sy && abs"
+alias pacinsd="sudo pacman -S --asdeps"
+alias pacmir="sudo pacman -Syy"
+alias pacforce="yes | sudo pacman -Su"
+alias pacnoq="sudo pacman -Syu --noconfirm"
+
+#   System
+LC_ALL="zh_TW.UTF-8"
+VISUAL="vim"
+export LC_ALL VISUAL

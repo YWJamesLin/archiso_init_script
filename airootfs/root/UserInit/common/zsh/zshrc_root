@@ -1,0 +1,41 @@
+
+# Aliases
+#   System
+alias poweroff="sync && sync && sync && poweroff"
+alias reboot="sync && sync && sync && reboot"
+
+#   Command
+alias pwd="pwd -P"
+alias rmdir="rmdir -p"
+alias ls="ls --color=always"
+alias cp="cp -ai"
+alias rm="rm -ri"
+alias mv="mv -i"
+alias egrep="egrep --color=auto --exclude-dir={.bzr,.cvs,.git,.hg,.svn}"
+
+#   Pacman
+alias pacupg="pacman -Syu"
+alias pacdl="pacman -Sw"
+alias pacin="pacman -S"
+alias pacins="pacman -U"
+alias pacre="pacman -R"
+alias pacrem="pacman -Rns"
+alias pacrep="pacman -Si"
+alias pacreps="pacman -Ss"
+alias pacloc="pacman -Qi"
+alias paclocs="pacman -Qs"
+alias paclo="pacman -Qdt"
+alias pacc="pacman -Scc"
+alias paclf="pacman -Ql"
+alias pacown="pacman -Qo"
+alias pacexpl="pacman -D --asexp"
+alias pacimpl="pacman -D --asdep"
+alias pacupd="pacman -Sy && abs"
+alias pacinsd="pacman -S --asdeps"
+alias pacmir="pacman -Syy"
+alias pacforce="yes | pacman -Su"
+alias pacnoq="pacman -Syu --noconfirm"
+
+#   System
+LC_ALL="zh_TW.UTF-8"
+export LC_ALL VISUAL

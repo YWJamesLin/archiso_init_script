@@ -1,0 +1,8 @@
+xf86-video-intel
+mesa
+libdrm
+libva
+libva-intel-driver
+cairo
+intel-gpu-tools
+intel-ucode

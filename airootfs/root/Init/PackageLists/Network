@@ -1,0 +1,10 @@
+elinks
+wget
+curl
+ethtool
+net-tools
+traceroute
+iftop
+iperf
+nmap
+bind-tools
