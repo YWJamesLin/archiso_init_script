@@ -8,3 +8,6 @@ iftop
 iperf
 nmap
 bind-tools
+mtr
+tcpdump
+traceroute
