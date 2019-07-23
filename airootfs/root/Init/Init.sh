@@ -9,10 +9,6 @@ sed -i 's/#\[multilib-testing\]/\[multilib-testing\]/' /etc/pacman.conf
 sed -i 's/#\[multilib\]/\[multilib\]/' /etc/pacman.conf
 sed -i 's/#Include/Include/g' /etc/pacman.conf
 
-if [ "$(cat /etc/pacman.conf | grep 'archlinuxfr')" == "" ]; then
-  cat ./archlinuxfr >> /etc/pacman.conf
-fi
-
 # Package List
 Packages="Basis Intel Kodi IBus FCITX Network Server Wireless XWindowApp XWindowDM XWindowDesktopApp XWindowMultiMedia"
 

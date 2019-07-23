@@ -30,17 +30,15 @@ cd ~/Init/
 ./Init.sh
 cd ~
 
-# Get package Lists 
+# Get package Lists
 export pacstrapList="$(cat ~/pacstrapList)"
 
 # Prepare PostSysInit script
 cp -a ./PostInit /mnt/root/
-cp /root/Init/archlinuxfr /mnt/root
 cp -a ./UserInit /mnt/root/
 arch-chroot /mnt /root/PostInit/PostInit.sh
 
 # Clean PostSysInit script
-rm -rf /mnt/root/archlinuxfr
 rm -rf /mnt/root/PostInit
 rm -rf /mnt/root/UserInit
 

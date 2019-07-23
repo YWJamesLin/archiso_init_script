@@ -4,6 +4,12 @@
 # Specify Services to enable
 ServicesToEnable="ntpd nftables sshd"
 
+# Install Yay to quickly fetch packages in AUR
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd -
+
 # HostName
 echo ${HOSTNAME} >> /etc/hostname
 
@@ -12,21 +18,18 @@ sed -i 's/#zh_TW.UTF-8 UTF-8/zh_TW.UTF-8 UTF-8/' /etc/locale.gen
 locale-gen
 
 # ZoneInfo
-if [ -e /etc/localtime ]; then 
+if [ -e /etc/localtime ]; then
   rm /etc/localtime
 fi
 ln -s /usr/share/zoneinfo/Asia/Taipei /etc/localtime
 
-# Modify Repository (adding archlinuxfr is for convenience to install yaourt and other pre-built AUR package)
+# Modify Repository
 sed -i 's/#Color/Color/' /etc/pacman.conf
 sed -i 's/#\[testing\]/\[testing\]/' /etc/pacman.conf
 sed -i 's/#\[community-testing\]/\[community-testing\]/' /etc/pacman.conf
 sed -i 's/#\[multilib-testing\]/\[multilib-testing\]/' /etc/pacman.conf
 sed -i 's/#\[multilib\]/\[multilib\]/' /etc/pacman.conf
 sed -i 's/#Include/Include/g' /etc/pacman.conf
-if [ "$(cat /etc/pacman.conf|grep 'archlinuxfr')" == "" ]; then
-  cat ~/archlinuxfr >> /etc/pacman.conf
-fi
 
 # Enable OnBoot DHCP and DHCPv6 Client on this interface
 if [ "${LANIF}" != "" ]; then

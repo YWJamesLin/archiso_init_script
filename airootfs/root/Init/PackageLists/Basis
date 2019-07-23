@@ -21,10 +21,10 @@ yajl
 p7zip
 hidapi
 bc
-yaourt
 powertop
 rfkill
 iotop
 screen
 tmux
 lm_sensors
+memtester
