@@ -2,7 +2,7 @@
 # System Initialization After Chrooted
 
 # Specify Services to enable
-ServicesToEnable="ntpd nftables sshd"
+ServicesToEnable="nftables sshd"
 
 # Install Yay to quickly fetch packages in AUR
 git clone https://aur.archlinux.org/yay.git
@@ -11,7 +11,7 @@ makepkg -si
 cd -
 
 # HostName
-echo ${HOSTNAME} >> /etc/hostname
+echo ${HostName} > /etc/hostname
 
 # Locale ( you can change locale config here)
 sed -i 's/#zh_TW.UTF-8 UTF-8/zh_TW.UTF-8 UTF-8/' /etc/locale.gen
@@ -32,13 +32,9 @@ sed -i 's/#\[multilib\]/\[multilib\]/' /etc/pacman.conf
 sed -i 's/#Include/Include/g' /etc/pacman.conf
 
 # Enable OnBoot DHCP and DHCPv6 Client on this interface
-if [ "${LANIF}" != "" ]; then
-  systemctl enable dhcpcd@${LANIF}
+if [ "${LANInterface}" != "" ]; then
+  systemctl enable dhcpcd@${LanInterface}
 fi
-
-# Skel with zsh Default (you may not need this if you use bash)
-touch /etc/skel/.zshrc
-rm -f /etc/skel/.bash*
 
 # Root Password
 echo "Please set your Root Password."
@@ -64,10 +60,6 @@ do
 done
 visudo
 echo ""
-
-# Change Shell (if you use bash, you need not do these)
-chsh -s /bin/zsh root
-chsh -s /bin/zsh ${UserName}
 
 # makepkg
 sed -i "s/CFLAGS=.*$/CFLAGS=\"$(gcc -march=native -E -v - </dev/null 2>&1 | sed -n 's/.* -v - //p')\"/" /etc/makepkg.conf
