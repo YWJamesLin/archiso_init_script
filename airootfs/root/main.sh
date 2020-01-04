@@ -8,24 +8,9 @@
 # are done or not.
 # Note. Default EFI Directory is /boot/efi
 
-# Please specify these variables
+. ~/config.sh
 
-#   LAN Interface name
-#     There would be dhcp and dhcpv6 client on this inteface onboot.
-LANIF=""
-
-#   Hostname
-HOSTNAME=""
-
-#   Normal User Name
-UserName="user"
-
-#   Configuration
-EnableJumboFrame="0"
-
-export LANIF HOSTNAME UserName EnableJumboFrame
-
-# Main Logic Start here
+# Installation start here
 cd ~/Init/
 ./Init.sh
 cd ~
