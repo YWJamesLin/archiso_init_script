@@ -5,6 +5,7 @@ zsh
 grub
 efibootmgr
 nftables
+iptables-nft
 dosfstools
 ntfs-3g
 f2fs-tools
