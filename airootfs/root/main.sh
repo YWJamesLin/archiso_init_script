@@ -1,10 +1,8 @@
 #! /bin/bash
 # Main Program of this Script.
 # Please Check whether
-#   (1)Mount on Filesystem
-#   (2)Choose Mirror
-#   (3)Connect to the Internet
-#   (4)Choose Package List
+#   (1) Mount on Filesystem
+#   (2) Connect to the Internet
 # are done or not.
 # Note. Default EFI Directory is /boot/efi
 
