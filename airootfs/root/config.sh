@@ -12,9 +12,11 @@ fi
 #   LANInterface: LAN Interface name, DHCP and DHCPv6 client services would be enabled onboot.
 #   Hostname: HostName of this system
 #   UserName: Normal user created during installation
+#   MirrorCountry: Country of archlinux mirror
 LANInterface=""
 HostName="ArchLinux"
 UserName="user"
+MirrorCountry="TW"
 
 for (( counter=0; counter<${#params[@]}; counter=counter+1 )); do
   confirm=""
