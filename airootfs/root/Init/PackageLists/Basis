@@ -3,6 +3,7 @@ base-devel
 vim
 zsh
 grub
+mkinitcpio
 efibootmgr
 nftables
 iptables-nft
