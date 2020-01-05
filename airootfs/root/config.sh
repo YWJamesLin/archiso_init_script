@@ -1,6 +1,6 @@
 #! /bin/bash
 
-params=("LANInterface" "HostName" "UserName")
+params=("LANInterface" "HostName" "UserName" "MirrorCountry")
 mountRoot="/mnt"
 
 if ! mountpoint -q "${mountRoot}"; then
