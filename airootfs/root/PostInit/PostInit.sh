@@ -4,12 +4,6 @@
 # Specify Services to enable
 ServicesToEnable="nftables sshd"
 
-# Install Yay to quickly fetch packages in AUR
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-cd -
-
 # HostName
 echo ${HostName} > /etc/hostname
 
