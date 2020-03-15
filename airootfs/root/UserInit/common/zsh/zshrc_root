@@ -38,4 +38,5 @@ alias pacnoq="pacman -Syu --noconfirm"
 
 #   System
 LC_ALL="zh_TW.UTF-8"
+VISUAL="vim"
 export LC_ALL VISUAL
