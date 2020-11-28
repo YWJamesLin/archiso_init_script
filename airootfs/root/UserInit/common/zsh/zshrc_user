@@ -1,8 +1,8 @@
 
 # Aliases
 #   System
-alias poweroff="sudo sync && sudo sync && sudo poweroff"
-alias reboot="sudo sync && sudo sync && sudo reboot"
+alias poweroff="sudo sync && sudo sync && sudo /usr/bin/env poweroff"
+alias reboot="sudo sync && sudo sync && sudo /usr/bin/env reboot"
 alias systemctl="sudo systemctl"
 
 #   Command

@@ -1,8 +1,8 @@
 
 # Aliases
 #   System
-alias poweroff="sync && sync && sync && poweroff"
-alias reboot="sync && sync && sync && reboot"
+alias poweroff="sync && sync && sync && /usr/bin/env poweroff"
+alias reboot="sync && sync && sync && /usr/bin/env reboot"
 
 #   Command
 alias pwd="pwd -P"
