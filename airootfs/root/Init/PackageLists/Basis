@@ -30,3 +30,5 @@ screen
 tmux
 lm_sensors
 memtester
+linux
+linux-firmware
