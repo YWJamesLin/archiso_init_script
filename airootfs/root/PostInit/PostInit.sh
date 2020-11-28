@@ -27,7 +27,7 @@ sed -i 's/#Include/Include/g' /etc/pacman.conf
 
 # Enable OnBoot DHCP and DHCPv6 Client on this interface
 if [ "${LANInterface}" != "" ]; then
-  systemctl enable dhcpcd@${LanInterface}
+  systemctl enable dhcpcd@${LANInterface}
 fi
 
 # Root Password
