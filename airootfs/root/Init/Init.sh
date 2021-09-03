@@ -22,7 +22,7 @@ do
   done
 done
 # Use mirror from specified country
-curl -s "https://www.archlinux.org/mirrorlist/?country=${MirrorCountry}&use_mirror_status=on" | sed 's/^#Server/Server/' > /etc/pacman.d/mirrorlist
+curl -s "https://archlinux.org/mirrorlist/?country=${MirrorCountry}&use_mirror_status=on" | sed 's/^#Server/Server/' > /etc/pacman.d/mirrorlist
 
 # Pacstrap packages
 pacstrap -i /mnt ${pacstrapList}

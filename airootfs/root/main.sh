@@ -6,6 +6,7 @@
 # are done or not.
 # Note. Default EFI Directory is /boot/efi
 
+find ~ -type f -name '*.sh' -exec chmod a+x {} \;
 . ~/config.sh
 
 # Installation start here
