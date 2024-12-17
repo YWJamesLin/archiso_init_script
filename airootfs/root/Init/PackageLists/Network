@@ -11,3 +11,4 @@ bind-tools
 mtr
 tcpdump
 traceroute
+netctl

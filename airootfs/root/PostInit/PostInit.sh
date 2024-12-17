@@ -2,7 +2,7 @@
 # System Initialization After Chrooted
 
 # Specify Services to enable
-ServicesToEnable="nftables sshd"
+ServicesToEnable="nftables sshd systemd-timesyncd"
 
 # HostName
 echo ${HostName} > /etc/hostname
@@ -19,8 +19,8 @@ ln -s /usr/share/zoneinfo/Asia/Taipei /etc/localtime
 
 # Modify Repository
 sed -i 's/#Color/Color/' /etc/pacman.conf
-sed -i 's/#\[testing\]/\[testing\]/' /etc/pacman.conf
-sed -i 's/#\[community-testing\]/\[community-testing\]/' /etc/pacman.conf
+sed -i 's/#\[core-testing\]/\[core-testing\]/' /etc/pacman.conf
+sed -i 's/#\[extra-testing\]/\[extra-testing\]/' /etc/pacman.conf
 sed -i 's/#\[multilib-testing\]/\[multilib-testing\]/' /etc/pacman.conf
 sed -i 's/#\[multilib\]/\[multilib\]/' /etc/pacman.conf
 sed -i 's/#Include/Include/g' /etc/pacman.conf
@@ -56,8 +56,7 @@ visudo
 echo ""
 
 # makepkg
-sed -i "s/CFLAGS=.*$/CFLAGS=\"$(gcc -march=native -E -v - </dev/null 2>&1 | sed -n 's/.* -v - //p')\"/" /etc/makepkg.conf
-sed -i 's/CXXFLAGS.*$/CXXFLAGS="${CFLAGS}"/' /etc/makepkg.conf
+#sed -i "s/CFLAGS=.*$/CFLAGS=\"$(gcc -march=native -E -v - </dev/null 2>&1 | sed -n 's/.* -v - //p')\"/" /etc/makepkg.conf
 sed -i "s/#MAKEFLAGS.*$/MAKEFLAGS=\"-j$(($(nproc)*2))\"/" /etc/makepkg.conf
 
 # intel CPU module load (needed in kernel 4.x)

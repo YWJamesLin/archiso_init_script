@@ -3,8 +3,8 @@
 
 # Modify Repository
 sed -i 's/#Color/Color/' /etc/pacman.conf
-sed -i 's/#\[testing\]/\[testing\]/' /etc/pacman.conf
-sed -i 's/#\[community-testing\]/\[community-testing\]/' /etc/pacman.conf
+sed -i 's/#\[core-testing\]/\[core-testing\]/' /etc/pacman.conf
+sed -i 's/#\[extra-testing\]/\[extra-testing\]/' /etc/pacman.conf
 sed -i 's/#\[multilib-testing\]/\[multilib-testing\]/' /etc/pacman.conf
 sed -i 's/#\[multilib\]/\[multilib\]/' /etc/pacman.conf
 sed -i 's/#Include/Include/g' /etc/pacman.conf
