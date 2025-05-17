@@ -1,8 +1,8 @@
-xf86-video-intel
 mesa
 libdrm
 libva
-libva-intel-driver
+intel-media-driver
+vpl-gpu-rt
 cairo
 intel-gpu-tools
 intel-ucode
